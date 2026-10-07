@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ランダム画像ビューア</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f4f4f4;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    main {
+      width: min(90vw, 720px);
+      text-align: center;
+    }
+    h1 { margin-bottom: 22px; }
+    button {
+      border: 0;
+      border-radius: 10px;
+      padding: 14px 28px;
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      background: #222;
+      cursor: pointer;
+    }
+    button:hover { background: #444; }
+    #result {
+      display: block;
+      max-width: 100%;
+      max-height: 70vh;
+      margin: 22px auto 0;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.12);
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>ランダム画像ビューア</h1>
+    <button type="button" onclick="drawRandomImage()">画像を表示する</button>
+    <img id="result" alt="ランダムに選ばれた画像" hidden>
+  </main>
+  <script src="images.js"></script>
+</body>
+</html>
